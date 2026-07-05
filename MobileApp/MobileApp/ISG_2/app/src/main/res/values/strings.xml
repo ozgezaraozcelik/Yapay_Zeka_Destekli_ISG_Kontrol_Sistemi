@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">ISG_2</string>
+    <string name="dashboard_title">İSG Mobil Kontrol Paneli</string>
+    <string name="section_general">Genel &amp; Şantiye Alanı</string>
+    <string name="section_heavy_industry">Ağır Sanayi &amp; Kaynakhane</string>
+    <string name="section_chemistry">Kimya &amp; Laboratuvar Sektörü</string>
+    <string name="section_logistics">Lojistik &amp; Depolama Yönetimi</string>
+    <string name="cb_helmet">Baret Kontrolü</string>
+    <string name="cb_vest">Yelek Kontrolü</string>
+    <string name="cb_belt">Emniyet Kemeri Kontrolü</string>
+    <string name="cb_welding">Kaynakçı Maskesi</string>
+    <string name="cb_ear">Kulak Koruyucu</string>
+    <string name="cb_gloves">Koruyucu Eldiven</string>
+    <string name="cb_suit">Kimyasal Koruyucu Giysi</string>
+    <string name="cb_mask">Toz/Gaz Maskesi</string>
+    <string name="cb_glasses">Koruyucu Gözlük</string>
+    <string name="cb_toolbox">Alet Çantası Kontrolü</string>
+</resources>

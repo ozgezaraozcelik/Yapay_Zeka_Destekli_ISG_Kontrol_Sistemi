@@ -1,0 +1,40 @@
+# Secrets & env
+.env
+*.env
+!*.env.example
+firebase-adminsdk.json
+*firebase-adminsdk*.json
+!*firebase-adminsdk*.example.json
+google-services.json
+config.properties
+
+# Python
+__pycache__/
+*.py[cod]
+ai_server/venv/
+.venv/
+
+# YOLO models
+*.pt
+*.weights
+*.onnx
+
+# Java desktop
+DesktopApp/*.class
+DesktopApp/config.properties
+
+# Android
+MobileApp/**/build/
+MobileApp/**/.gradle/
+MobileApp/**/local.properties
+MobileApp/**/.cxx/
+MobileApp/**/captures/
+
+# IDE
+.idea/
+.vscode/
+*.iml
+.DS_Store
+
+# OS / misc
+Thumbs.db
