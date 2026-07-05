@@ -96,6 +96,8 @@ Various open-source datasets were collected for the 10 most commonly used PPE cl
 
 ### 2. Desktop Control Panel (Desktop Client)
 
+<img width="1118" height="631" alt="Ekran görüntüsü 2026-06-11 020040" src="https://github.com/user-attachments/assets/d98e3d82-1ca3-45f6-85c4-87946f0a58c1" />
+
 * **Developed using Java Swing, this is the main monitoring hub for field managers and OHS experts.**
 
 * **Establishes continuous JSON-based communication with the Python AI server via TCP/IP (Port 9999).**
@@ -105,6 +107,8 @@ Various open-source datasets were collected for the 10 most commonly used PPE cl
 Rules can be set according to sectoral profiles (Construction Site, Chemical Plant, Logistics, etc.). Upon detecting a violation, the event is logged asynchronously to the Firebase Firestore cloud database without interrupting the main inference loop.
 
 ### 3. Mobile Client (Android App)
+
+<img width="282" height="635" alt="Ekran görüntüsü 2026-06-11 020105" src="https://github.com/user-attachments/assets/a471d120-37e8-47ff-b8d2-3436f541aea2" />
 
 * **Developed on the Android (Java) platform to enable instant response from field personnel, supervisors, and security guards.**
 
