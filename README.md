@@ -89,7 +89,7 @@ Various open-source datasets were collected for the 10 most commonly used PPE cl
 
 ### 2. Desktop Control Panel (Desktop Client)
 
-*Developed using Java Swing, this is the main monitoring hub for field managers and OHS experts.
+* **Developed using Java Swing, this is the main monitoring hub for field managers and OHS experts.**
 
 *Establishes continuous JSON-based communication with the Python AI server via TCP/IP (Port 9999).
 
