@@ -50,22 +50,23 @@ pip install -r requirements.txt
 
 **2. Yapılandırma (Şifreler ve Modeller)**
 
-*ai_server/ içindeki .env.example dosyasının adını .env olarak değiştirin.
+* **ai_server/ içindeki .env.example dosyasının adını .env olarak değiştirin.**
 
-*firebase-adminsdk.example.json dosyasının adını firebase-adminsdk.json yapıp içine Google Cloud üzerinden aldığınız kendi servis anahtarlarınızı girin.
+* **firebase-adminsdk.example.json dosyasının adını firebase-adminsdk.json yapıp içine Google Cloud üzerinden aldığınız kendi servis anahtarlarınızı girin.**
 
-*Eğittiğiniz best.pt ağırlık dosyasını ai_server/ dizinine ekleyin.
+* **Eğittiğiniz best.pt ağırlık dosyasını ai_server/ dizinine ekleyin.**
 
 **3. Sistemi Başlatma**
 
-*Yapay Zeka Sunucusu: ai_server/ dizininde python detector_server.py komutunu çalıştırın.
+* **Yapay Zeka Sunucusu: ai_server/ dizininde python detector_server.py komutunu çalıştırın.**
 
-*Masaüstü Uygulaması: DesktopApp/ dizinindeki projeyi derleyip (javac SafetyApp.java) çalıştırın.
+* **Masaüstü Uygulaması: DesktopApp/ dizinindeki projeyi derleyip (javac SafetyApp.java) çalıştırın.**
 
-*Mobil Uygulama: MobileApp/ klasörünü Android Studio ile açarak derleyin.
+* **Mobil Uygulama: MobileApp/ klasörünü Android Studio ile açarak derleyin.**
 
 
 🙏 Teşekkür
+
 Bu projenin vizyonunun oluşmasında ve mimarisinin kurulmasında değerli katkılarını esirgemeyen danışmanlarım Prof. Dr. Tuncay AYDOĞAN'a, Arş. Gör. Ahmet Bestami KÖSE'ye ve mentörüm Fatih Güler'e en içten teşekkürlerimi sunarım.
 
 Geliştiren: Özge Zara Özçelik
@@ -91,19 +92,19 @@ Various open-source datasets were collected for the 10 most commonly used PPE cl
 
 * **Developed using Java Swing, this is the main monitoring hub for field managers and OHS experts.**
 
-*Establishes continuous JSON-based communication with the Python AI server via TCP/IP (Port 9999).
+* **Establishes continuous JSON-based communication with the Python AI server via TCP/IP (Port 9999).**
 
-*Displays real-time camera feeds and AI-drawn bounding boxes directly on the screen.
+* **Displays real-time camera feeds and AI-drawn bounding boxes directly on the screen.**
 
 Rules can be set according to sectoral profiles (Construction Site, Chemical Plant, Logistics, etc.). Upon detecting a violation, the event is logged asynchronously to the Firebase Firestore cloud database without interrupting the main inference loop.
 
 ### 3. Mobile Client (Android App)
 
-*Developed on the Android (Java) platform to enable instant response from field personnel, supervisors, and security guards.
+* **Developed on the Android (Java) platform to enable instant response from field personnel, supervisors, and security guards.**
 
-*Fully synchronized with Firebase Firestore.
+* **Fully synchronized with Firebase Firestore.**
 
-*Listens for asynchronous violation logs. If a "Critical Violation" is recorded by the desktop or AI server, an instant push notification is sent within seconds to the mobile device of the relevant personnel in the field.
+* **Listens for asynchronous violation logs. If a "Critical Violation" is recorded by the desktop or AI server, an instant push notification is sent within seconds to the mobile device of the relevant personnel in the field.**
 
 *Historical violations and proof of incidents can be accessed instantly through the mobile app.
 
@@ -120,19 +121,19 @@ pip install -r requirements.txt
 ````
 **2. Configuration (Secrets & Models)**
 
-*Rename .env.example in ai_server/ to .env.
+* **Rename .env.example in ai_server/ to .env.**
 
-*Rename firebase-adminsdk.example.json to firebase-adminsdk.json and insert your own GCP service account keys.
+* **Rename firebase-adminsdk.example.json to firebase-adminsdk.json and insert your own GCP service account keys.**
 
-*Place your trained best.pt weights file into the ai_server/ directory.
+* **Place your trained best.pt weights file into the ai_server/ directory.**
 
 **3. Starting the System**
 
-*AI Server: Run python detector_server.py inside the ai_server/ directory.
+* **AI Server:** Run python detector_server.py inside the ai_server/ directory.
 
-*Desktop App: Compile (javac SafetyApp.java) and run the project inside DesktopApp/.
+* **Desktop App:** Compile (javac SafetyApp.java) and run the project inside DesktopApp/.
 
-*Mobile App: Open the MobileApp/ folder with Android Studio and build the project.
+* **Mobile App:** Open the MobileApp/ folder with Android Studio and build the project.
 
 🙏 Acknowledgements
 
