@@ -24,12 +24,18 @@ Endüstriyel sahalarda en sık kullanılan 10 farklı KKD sınıfı (baret, yele
 * **AI Sunucusu (Backend):** Eğitilen model, Python üzerinden bir TCP Soket sunucusu olarak ayağa kaldırılmış ve 640px çözünürlükte ortalama **1.5 ms** gecikme ile gerçek zamanlı çıkarım (inference) yapacak hale getirilmiştir.
 
 ### 2. Masaüstü Kontrol Paneli (Desktop Client)
+
+<img width="1118" height="631" alt="Ekran görüntüsü 2026-06-11 020040" src="https://github.com/user-attachments/assets/d98e3d82-1ca3-45f6-85c4-87946f0a58c1" />
+
 Saha yöneticileri ve İSG uzmanları için **Java Swing** kullanılarak geliştirilmiş ana izleme merkezidir.
 * Python AI sunucusu ile TCP/IP (Port 9999) üzerinden kesintisiz JSON tabanlı iletişim kurar.
 * Kameralardan gelen anlık görüntüleri ve yapay zekanın çizdiği sınır kutularını (bounding boxes) ekranda gerçek zamanlı gösterir.
 * Sektörel profillere (Şantiye, Kimya Tesisi, Lojistik vb.) göre kural setleri belirlenebilir. İhlal tespiti anında, ana çıkarım döngüsünü aksatmadan **Firebase Firestore** bulut günlüğüne asenkron olarak kayıt atar.
 
 ### 3. Mobil İstemci (Android App)
+
+<img width="282" height="635" alt="Ekran görüntüsü 2026-06-11 020105" src="https://github.com/user-attachments/assets/a471d120-37e8-47ff-b8d2-3436f541aea2" />
+
 Saha personelleri, amirler ve güvenlik görevlilerinin anlık müdahale edebilmesi için **Android (Java)** platformunda geliştirilmiştir.
 * Firebase Firestore ile tam senkronize çalışır.
 * Masaüstü veya AI sunucusu tarafından buluta yazılan bir "Kritik İhlal" durumunda, sahada devriye gezen yetkilinin cebine saniyeler içinde anlık bildirim (Push Notification) düşürür.
