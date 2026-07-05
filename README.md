@@ -36,21 +36,6 @@ Saha personelleri, amirler ve güvenlik görevlilerinin anlık müdahale edebilm
 * Olay anının kanıtlarına (geçmiş ihlaller) mobil uygulama üzerinden anında ulaşılabilir.
 
 ---
-2. Yapılandırma (Şifreler ve Modeller)
-
-ai_server/ içindeki .env.example dosyasının adını .env olarak değiştirin.
-
-firebase-adminsdk.example.json dosyasının adını firebase-adminsdk.json yapıp içine Google Cloud üzerinden aldığınız kendi servis anahtarlarınızı girin.
-
-Eğittiğiniz best.pt ağırlık dosyasını ai_server/ dizinine ekleyin.
-
-3. Sistemi Başlatma
-
-Yapay Zeka Sunucusu: ai_server/ dizininde python detector_server.py komutunu çalıştırın.
-
-Masaüstü Uygulaması: DesktopApp/ dizinindeki projeyi derleyip (javac SafetyApp.java) çalıştırın.
-
-Mobil Uygulama: MobileApp/ klasörünü Android Studio ile açarak derleyin.
 
 ## ⚙️ Kurulum ve Çalıştırma
 
@@ -62,22 +47,43 @@ python -m venv venv
 venv\Scripts\activate # Windows için
 pip install -r requirements.txt
 ```
+**2. Yapılandırma (Şifreler ve Modeller)**
+
+ai_server/ içindeki .env.example dosyasının adını .env olarak değiştirin.
+
+firebase-adminsdk.example.json dosyasının adını firebase-adminsdk.json yapıp içine Google Cloud üzerinden aldığınız kendi servis anahtarlarınızı girin.
+
+Eğittiğiniz best.pt ağırlık dosyasını ai_server/ dizinine ekleyin.
+
+**3. Sistemi Başlatma**
+
+Yapay Zeka Sunucusu: ai_server/ dizininde python detector_server.py komutunu çalıştırın.
+
+Masaüstü Uygulaması: DesktopApp/ dizinindeki projeyi derleyip (javac SafetyApp.java) çalıştırın.
+
+Mobil Uygulama: MobileApp/ klasörünü Android Studio ile açarak derleyin.
+🙏 Teşekkür
+Bu projenin vizyonunun oluşmasında ve mimarisinin kurulmasında değerli katkılarını esirgemeyen danışmanlarım Prof. Dr. Tuncay AYDOĞAN'a, Arş. Gör. Ahmet Bestami KÖSE'ye ve mentörüm Fatih Güler'e en içten teşekkürlerimi sunarım.
+
+Geliştiren: Özge Zara Özçelik
+
+
 English Version
 This project is a distributed, end-to-end artificial intelligence system designed to automate Personal Protective Equipment (PPE) inspections in industrial production sites with 100+ personnel, supporting compliance with Turkish OHS Law No. 6331.
 
 🏗️ Project Modules and Architecture
 The system consists of 3 main modules: data processing/AI, central desktop control, and mobile field alerts.
 
-1. Dataset Engineering and Model Training (AI Server)
+### 1. Dataset Engineering and Model Training (AI Server)
 Various open-source datasets were collected for the 10 most commonly used PPE classes in industrial fields (helmets, vests, gloves, masks, etc.). To prevent the "class imbalance" problem in raw data from corrupting the model's learning capabilities, a specific architecture was designed:
 
-Data Balancing: Using a custom-developed Python script, the massive amount of collected raw data was filtered, and exactly 1000 instances were selected for each of the 10 custom PPE classes. This completely eliminated class inequality.
+* **Data Balancing:** Using a custom-developed Python script, the massive amount of collected raw data was filtered, and exactly 1000 instances were selected for each of the 10 custom PPE classes. This completely eliminated class inequality.
 
-Training & Metrics: The Ultralytics YOLOv8m model was fine-tuned on this balanced dataset (ISG_Final_Dataset2). The model achieved outstanding performance with mAP@0.5 = 96.9% and mAP@0.5:0.95 = 83.3%.
+* **Training & Metrics:** The Ultralytics YOLOv8m model was fine-tuned on this balanced dataset (ISG_Final_Dataset2). The model achieved outstanding performance with mAP@0.5 = 96.9% and mAP@0.5:0.95 = 83.3%.
 
-AI Server (Backend): The trained model was deployed as a TCP Socket server via Python, capable of performing real-time inference with an average latency of 1.5 ms at 640px resolution.
+* **AI Server (Backend):** The trained model was deployed as a TCP Socket server via Python, capable of performing real-time inference with an average latency of 1.5 ms at 640px resolution.
 
-2. Desktop Control Panel (Desktop Client)
+### 2. Desktop Control Panel (Desktop Client)
 Developed using Java Swing, this is the main monitoring hub for field managers and OHS experts.
 
 Establishes continuous JSON-based communication with the Python AI server via TCP/IP (Port 9999).
@@ -96,7 +102,7 @@ Listens for asynchronous violation logs. If a "Critical Violation" is recorded b
 Historical violations and proof of incidents can be accessed instantly through the mobile app.
 
 ⚙️ Installation & Setup
-1. Requirements
+**1. Requirements**
 
 ````bash
 git clone [https://github.com/ozgezaraozcelik/Yapay_Zeka_Destekli_ISG_Kontrol_Sistemi.git](https://github.com/ozgezaraozcelik/Yapay_Zeka_Destekli_ISG_Kontrol_Sistemi.git)
@@ -105,7 +111,7 @@ python -m venv venv
 venv\Scripts\activate # For Windows
 pip install -r requirements.txt
 ````
-2. Configuration (Secrets & Models)
+**2. Configuration (Secrets & Models)**
 
 Rename .env.example in ai_server/ to .env.
 
@@ -113,7 +119,7 @@ Rename firebase-adminsdk.example.json to firebase-adminsdk.json and insert your 
 
 Place your trained best.pt weights file into the ai_server/ directory.
 
-3. Starting the System
+**3. Starting the System**
 
 AI Server: Run python detector_server.py inside the ai_server/ directory.
 
