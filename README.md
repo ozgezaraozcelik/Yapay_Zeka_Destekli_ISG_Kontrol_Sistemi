@@ -47,6 +47,7 @@ python -m venv venv
 venv\Scripts\activate # Windows için
 pip install -r requirements.txt
 ```
+
 **2. Yapılandırma (Şifreler ve Modeller)**
 
 ai_server/ içindeki .env.example dosyasının adını .env olarak değiştirin.
@@ -62,6 +63,8 @@ Yapay Zeka Sunucusu: ai_server/ dizininde python detector_server.py komutunu ça
 Masaüstü Uygulaması: DesktopApp/ dizinindeki projeyi derleyip (javac SafetyApp.java) çalıştırın.
 
 Mobil Uygulama: MobileApp/ klasörünü Android Studio ile açarak derleyin.
+
+
 🙏 Teşekkür
 Bu projenin vizyonunun oluşmasında ve mimarisinin kurulmasında değerli katkılarını esirgemeyen danışmanlarım Prof. Dr. Tuncay AYDOĞAN'a, Arş. Gör. Ahmet Bestami KÖSE'ye ve mentörüm Fatih Güler'e en içten teşekkürlerimi sunarım.
 
