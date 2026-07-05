@@ -19,7 +19,7 @@ Sistem; veri işleme, merkezi masaüstü kontrolü ve sahaya yönelik mobil bild
 
 ### 1. Veri Seti Mühendisliği ve Model Eğitimi (AI Server)
 Endüstriyel sahalarda en sık kullanılan 10 farklı KKD sınıfı (baret, yelek, eldiven, maske vb.) için açık kaynaklardan çeşitli veri setleri toplanmıştır. Ancak ham verilerdeki "sınıf dengesizliği" (class imbalance) probleminin modelin öğrenme yeteneğini bozmaması için özel bir mimari kurgulanmıştır:
-*   **Veri Dengeleme:** Geliştirilen özel bir Python betiği (script) kullanılarak, toplanan devasa veriler filtrelenmiş ve oluşturulan 10 özel KKD sınıfının her biri için **tam 1000'er adet** görsel ayrılmıştır. Sınıf eşitsizliği tamamen ortadan kaldırılmıştır.
+*   **Veri Dengeleme:** Geliştirilen özel bir Python scripti kullanılarak, toplanan devasa veriler filtrelenmiş ve oluşturulan 10 özel KKD sınıfının her biri için **tam 1000'er adet** görsel ayrılmıştır. Sınıf eşitsizliği tamamen ortadan kaldırılmıştır.
 *   **Eğitim:** Hazırlanan bu dengeli veri seti (ISG_Final_Dataset2) üzerinde Ultralytics YOLOv8m modeli eğitilmiş ve tüm sınıflarda eşit ağırlıklı, yüksek hassasiyetli bir öğrenme sağlanmıştır.
 *   **AI Sunucusu:** Eğitilen model, Python üzerinden bir TCP Soket sunucusu olarak ayağa kaldırılmış ve saniyede milisaniyeler (1.5 ms) seviyesinde gerçek zamanlı çıkarım (inference) yapacak hale getirilmiştir.
 
